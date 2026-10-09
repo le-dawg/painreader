@@ -1,0 +1,33 @@
+{
+  "name": "painreader",
+  "version": "0.1.0",
+  "description": "Launches a temporary upload bridge and local web app that routes uploaded image file paths into a Codex thread.",
+  "author": {
+    "name": "le-dawg"
+  },
+  "repository": "https://github.com/le-dawg/painreader",
+  "license": "MIT",
+  "keywords": [
+    "bridge",
+    "upload",
+    "thread",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Painreader",
+    "shortDescription": "Launch temporary upload bridge",
+    "longDescription": "Painreader launches a temporary local upload bridge and local web app, exposes it via a public tunnel, and routes uploaded image file paths plus event metadata into a target Codex thread.",
+    "developerName": "le-dawg",
+    "category": "Productivity",
+    "capabilities": [
+      "Launch temporary bridge",
+      "Close temporary bridge",
+      "Thread routing"
+    ],
+    "defaultPrompt": [
+      "/painreader",
+      "/painreader close"
+    ]
+  }
+}

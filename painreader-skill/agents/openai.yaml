@@ -1,5 +1,6 @@
 interface:
-  display_name: Painreader
-  short_description: Launch or close a temporary image-upload bridge
+  display_name: "/painreader"
+  short_description: "Launch or close a temporary image-upload bridge."
+  default_prompt: "Use $painreader to launch a temporary upload bridge for the current thread, or use /painreader close to shut it down."
 policy:
   allow_implicit_invocation: false
