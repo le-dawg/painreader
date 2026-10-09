@@ -3,9 +3,12 @@ import path from "node:path";
 import { loadQueueConfig, queueProcessedEvent, shouldQueueEvent } from "./codex-queue.mjs";
 
 const rootDir = process.cwd();
-const eventsDir = path.join(rootDir, ".runtime-events");
-const queueAuditDir = path.join(rootDir, ".runtime-codex-queue");
-const queueConfig = await loadQueueConfig(rootDir);
+const runtimeRoot = process.env.PAINREADER_RUNTIME_DIR
+  ? path.resolve(process.env.PAINREADER_RUNTIME_DIR)
+  : rootDir;
+const eventsDir = path.join(runtimeRoot, ".runtime-events");
+const queueAuditDir = path.join(runtimeRoot, ".runtime-codex-queue");
+const queueConfig = await loadQueueConfig(rootDir, process.env);
 
 await mkdir(queueAuditDir, { recursive: true });
 
@@ -39,10 +42,10 @@ for (const eventFile of events) {
     config: queueConfig,
     eventFile,
     eventPath,
-    imagePath: payload.assetUrl,
-    payload,
-    rootDir
-  });
+      imagePath: payload.assetUrl,
+      payload,
+      rootDir
+    });
 
   if (queueResult.status === "queued" || queueResult.status === "already-queued") {
     queued += 1;
