@@ -1,0 +1,10 @@
+.vercel
+node_modules
+dist
+.runtime-*
+.painreader-state
+.painreader-runtime
+History
+qa-deployed-*.png
+qa-playwright-upload.mjs
+refund-message-drafts-2026-10-08.md

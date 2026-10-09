@@ -1,0 +1,9 @@
+{
+  "name": "KSP Letter Scan",
+  "short_name": "KSP Scan",
+  "description": "Capture, clean, and upload letters for OCR.",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#f5f1e8",
+  "theme_color": "#111111"
+}

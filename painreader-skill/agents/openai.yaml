@@ -1,0 +1,5 @@
+interface:
+  display_name: Painreader
+  short_description: Launch or close a temporary image-upload bridge
+policy:
+  allow_implicit_invocation: false

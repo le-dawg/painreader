@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "thread": "codex://threads/01a12043-c36c-7311-a6d8-0b8ca83ed22e",
+  "promptTemplate": "A new local-bridge scan is ready.\n\nEvent file: {{eventPath}}\nImage path: {{imagePath}}\nUpload ID: {{uploadId}}\nSource: {{source}}\nCaptured at: {{timestamp}}\n\nNo local OCR was performed by the bridge.\nUse the image file at the path above as the primary source document and continue the downstream automation flow in this Codex thread."
+}
