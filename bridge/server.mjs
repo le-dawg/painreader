@@ -54,7 +54,8 @@ function triggerQueueBridge() {
     detached: true,
     env: {
       ...process.env,
-      PAINREADER_RUNTIME_DIR: runtimeRoot
+      PAINREADER_RUNTIME_DIR: runtimeRoot,
+      CODEX_QUEUE_THREAD: process.env.CODEX_QUEUE_THREAD ?? ""
     },
     stdio: "ignore"
   });
